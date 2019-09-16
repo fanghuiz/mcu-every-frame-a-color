@@ -1,0 +1,266 @@
+@CHARSET "ISO-8859-1";
+
+/* -------------------- Reset CSS -------------------- */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+/* -------------------- Custom CSS -------------------- */
+
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+
+/* Texts
+* --------------------------------------- */
+
+/* Fonts */
+h1{
+  font-size: 3em;
+  font-family: 'Rock Salt', cursive;
+}
+
+/* h1{
+	font-size: 6em;
+} */
+
+h2{
+  font-size: 2.5em;
+  font-family: 'Rock Salt', cursive;
+}
+
+body{
+	font-family: "Play", sans-serif;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+
+p{
+	font-size: 2em;
+}
+
+#menu{
+  background: #121212;
+  font-family: "Play", sans-serif;
+}
+
+/* Text alignment */
+.section{
+	text-align:center;
+}
+
+.section h1,h2{
+  text-align:center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f2f2f2;
+  opacity: 0.8;
+}
+
+.slide h1,h2{
+  text-align:center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f2f2f2;
+  opacity: 0.8;
+}
+
+#sec-home h1,h2{
+  text-align:center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f2f2f2;
+  opacity: 0.8;
+}
+
+#sec-home p{
+  font-family: "Play", sans-serif;
+  font-size: 1.2em;
+  text-align:center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f2f2f2;
+  opacity: 0.8;
+}
+
+#sec-about p{
+  font-family: "Play", sans-serif;
+  font-size: 1.2em;
+  text-align:center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f2f2f2;
+  opacity: 0.8;
+}
+
+
+/* Background image position
+* --------------------------------------- */
+.section{
+  background-size: contain;
+  /* background-size: cover; */
+  background-color: #121212;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.slide{
+  background-size: contain;
+  background-color: #121212;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+
+/* Menu bar
+ * --------------------------------------- */
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 50px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #f2f2f2;
+	/* background: rgba(255,255,255, 0.5); */
+	/* -webkit-border-radius: 10px;
+            border-radius: 10px; */
+}
+
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+
+/* active item */
+#menu li.active a{
+	color: #f2f2f2;
+  border-bottom: 3px solid #AEB6BF;
+}
+
+#menu li.active{
+	background:transparent;
+	/* background: rgba(0,0,0, 0.5); */
+	color: #fff;
+}
+
+/* non active item */
+#menu li a{
+	text-decoration:none;
+	color: #85929E;
+  border-bottom: 3px solid transparent;
+  /* opacity: 0.6; */
+  transition: 0.5s;
+}
+
+/* #menu li.active a:hover{
+	color: #fff;
+} */
+
+/* item on hover */
+#menu li:hover a{
+  color: #fff;
+  background: transparent;
+  border-bottom: 3px solid #AEB6BF;
+  /* opacity: 1; */
+}
+
+
+
+/* Misc elements
+ * --------------------------------------- */
+
+/* slide arrow */
+.fp-controlArrow {
+  opacity: 0.7;
+}
+
+/* Button */
+.btn {
+  border: 2px solid white;
+  background-color: white;
+  color: white;
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  /* margin: 4px 2px; */
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+/* Gray transparent button */
+.transparent {
+  border-color: #e7e7e7;
+  background-color: transparent;
+  /* color: #f5f5f5; */
+}
+
+.transparent:hover {
+  background: #e7e7e7;
+  color: #121212;
+  opacity: 1;
+}

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>MCU in Colors - fullPage.js</title>
+	<meta name="author" content="Fanghui Zhao" />
+	<meta name="description" content="Colors of Marvel Cinematic Universe" />
+	<!-- <meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" /> -->
+	<meta name="Resource-type" content="Document" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css" integrity="sha256-3IkGqGYOvq1Ype2MXFwVJFeBtBACgiveho3SacOEEP8=" crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="custom.css" />
+
+	<!-- Light box -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.1.3/dist/css/lightgallery.css">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Rock+Salt|Play&display=swap" rel="stylesheet">
+
+	<!-- Icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+
+		/* Section background and styles
+	* --------------------------------------- */
+	#sec-home{
+		background: -webkit-radial-gradient(circle, rgba(84,0,0,1) 0%, rgba(5,0,1,1) 100%);
+	}
+
+	#sec-all p{
+		left: 50%;
+		padding-top: 5%;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	#sec-about{
+		background: -webkit-radial-gradient(circle, rgba(84,0,0,1) 0%, rgba(5,0,1,1) 100%);
+	}
+
+
+	/*Adding background for the slides
+	* --------------------------------------- */
+
+	/* --- Avengers --- */
+	#avengers1{
+		background-image: url(imgs/avengers-1.png);
+		/* padding: 6% 0 0 0; */
+	}
+	#avengers2{
+		background-image: url(imgs/avengers-2.png);
+	}
+	#avengers3{
+		background-image: url(imgs/avengers-3.png);
+	}
+	#avengers4{
+		background-image: url(imgs/avengers-4.png);
+	}
+
+	/* --- Iron man --- */
+	#im1{
+		background-image: url(imgs/ironman-1.png);
+	}
+	#im2{
+		background-image: url(imgs/ironman-2.png);
+	}
+	#im3{
+		background-image: url(imgs/ironman-3.png);
+	}
+
+	/* --- Captain America --- */
+	#cap1{
+		background-image: url(imgs/cap-1.png);
+	}
+	#cap2{
+		background-image: url(imgs/cap-2.png);
+	}
+	#cap3{
+		background-image: url(imgs/cap-3.png);
+	}
+
+	/* --- Thor --- */
+	#thor1{
+		background-image: url(imgs/thor-1.png);
+	}
+	#thor2{
+		background-image: url(imgs/thor-2.png);
+	}
+	#thor3{
+		background-image: url(imgs/thor-3.png);
+	}
+
+	/* --- Guardians --- */
+	#gotg1{
+		background-image: url(imgs/guardians-1.png);
+	}
+	#gotg2{
+		background-image: url(imgs/guardians-2.png);
+	}
+
+	/* --- Ant man --- */
+	#am1{
+		background-image: url(imgs/antman-1.png);
+	}
+	#am2{
+		background-image: url(imgs/antman-2.png);
+	}
+
+	/* --- Others --- */
+	#hulk1{
+		background-image: url(imgs/hulk-1.png);
+	}
+	#strange1{
+		background-image: url(imgs/dr-strange-1.png);
+	}
+	#spidey1{
+		background-image: url(imgs/spidey-1.png);
+	}
+	#panther1{
+		background-image: url(imgs/panther-1.png);
+	}
+	#cm1{
+		background-image: url(imgs/cm-1.png);
+	}
+
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<!-- Menu bar -->
+	<ul id="menu">
+		<li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
+		<li data-menuanchor="avengers"><a href="#avengers">Avengers</a></li>
+		<li data-menuanchor="iron-man"><a href="#iron-man">Iron Man</a></li>
+		<li data-menuanchor="cap"><a href="#cap">Captain America</a></li>
+		<li data-menuanchor="thor"><a href="#thor">Thor</a></li>
+		<li data-menuanchor="gotg"><a href="#gotg">Guardians</a></li>
+		<li data-menuanchor="ant-man"><a href="#ant-man">Ant-Man</a></li>
+		<li data-menuanchor="others"><a href="#others">Others</a></li>
+		<li data-menuanchor="all"><a href="#all">Full Gallery</a></li>
+		<li data-menuanchor="about"><a href="#about">About</a></li>
+	</ul>
+
+
+	<div id="fullpage">
+
+		<div class="section " id="sec-home">
+			<h1>
+				Every frame a color
+			</h1>
+			<p>The Colors of Marvel Cinematic Universe</p>
+		</div>
+
+		<!-- Avengers -->
+		<div class="section" id="sec-avengers">
+			<div class="slide" id="avengers1">
+				<h2>The Avengers</h2>
+			</div>
+			<div class="slide" id="avengers2">
+				<h2>Avengers:<br>Age of Ultron</h2>
+			</div>
+			<div class="slide" id="avengers3">
+				<h2>Avengers: Infinity War</h2>
+			</div>
+			<div class="slide" id="avengers4">
+				<h2>Avengers: Endgame</h2>
+			</div>
+		</div>
+
+		<!-- Iron man -->
+		<div class="section" id="sec-im">
+			<div class="slide" id="im1">
+				<h2>Iron Man</h2>
+			</div>
+			<div class="slide" id="im2">
+				<h2>Iron Man 2</h2>
+			</div>
+			<div class="slide" id="im3">
+				<h2>Iron Man 3</h2>
+			</div>
+		</div>
+
+		<!-- CA -->
+		<div class="section" id="sec-cap">
+			<div class="slide" id="cap1">
+				<h2>Captain America:<br>The First Avenger</h2>
+			</div>
+			<div class="slide" id="cap2">
+				<h2>Captain America:<br>Winter Soldier</h2>
+			</div>
+			<div class="slide" id="cap3">
+				<h2>Captain America:<br>Civil War</h2>
+			</div>
+		</div>
+
+		<!-- Thor -->
+		<div class="section" id="sec-thor">
+			<div class="slide" id="thor1">
+				<h2>Thor</h2>
+			</div>
+			<div class="slide" id="thor2">
+				<h2>Thor: The Dark World</h2>
+			</div>
+			<div class="slide" id="thor3">
+				<h2>Thor: Ragnarok</h2>
+			</div>
+		</div>
+
+		<!-- GotG -->
+		<div class="section" id="sec-gotg">
+			<div class="slide" id="gotg1">
+				<h2>Guardians of the Galaxy</h2>
+			</div>
+			<div class="slide" id="gotg2">
+				<h2>Guardians of the Galaxy<br>Vol.2</h2>
+			</div>
+		</div>
+
+		<!-- Ant man -->
+		<div class="section" id="sec-am">
+			<div class="slide" id="am1">
+				<h2>Ant-Man</h2>
+			</div>
+			<div class="slide" id="am2">
+				<h2>Ant-Man and the Wasp</h2>
+			</div>
+		</div>
+
+		<!-- Other solo -->
+		<div class="section" id="sec-other">
+			<div class="slide" id="hulk1">
+				<h2>The Incredible Hulk</h2>
+			</div>
+			<div class="slide" id="strange1">
+				<h2>Doctor Strange</h2>
+			</div>
+			<div class="slide" id="spidey1">
+				<h2>Spider-Man: Homecoming</h2>
+			</div>
+			<div class="slide" id="panther1">
+				<h2>Black Panther</h2>
+			</div>
+			<div class="slide" id="cm1">
+				<h2>Captain Marvel</h2>
+			</div>
+		</div>
+
+		<!-- All in light box gallery -->
+		<div class="section" id="sec-all">
+
+			<p id="lightgallery">
+
+				<a href="imgs/ironman-1.png" data-sub-html="Iron Man">
+					<img src="imgs/ironman-1.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/hulk-1.png" data-sub-html="The Incredible Hulk">
+					<img src="imgs/hulk-1.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/ironman-2.png" data-sub-html="Iron Man 2">
+					<img src="imgs/ironman-2.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/thor-1.png" data-sub-html="Thor">
+					<img src="imgs/thor-1.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/cap-1.png" data-sub-html="Captain America: The First Avenger">
+					<img src="imgs/cap-1.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/avengers-1.png" data-sub-html="The Avengers">
+					<img src="imgs/avengers-1.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/ironman-3.png" data-sub-html="Iron Man 3">
+					<img src="imgs/ironman-3.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/thor-2.png" data-sub-html="Thor: The Dark World">
+					<img src="imgs/thor-2.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/cap-2.png" data-sub-html="Captain America: Winter Soldier">
+					<img src="imgs/cap-2.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/guardians-1.png" data-sub-html="Guardians of the Galaxy">
+					<img src="imgs/guardians-1.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/avengers-2.png" data-sub-html="Avengers: Age of Ultron">
+					<img src="imgs/avengers-2.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/antman-1.png" data-sub-html="Ant-Man">
+					<img src="imgs/antman-1.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/cap-3.png" data-sub-html="Captain America: Civil War">
+					<img src="imgs/cap-3.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/dr-strange-1.png" data-sub-html="Doctor Strange">
+					<img src="imgs/dr-strange-1.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/guardians-2.png" data-sub-html="Guardians of the Galaxy Vol.2">
+					<img src="imgs/guardians-2.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/spidey-1.png" data-sub-html="Spider-Man: Homecoming">
+					<img src="imgs/spidey-1.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/thor-3.png" data-sub-html="Thor: Ragnarok">
+					<img src="imgs/thor-3.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/panther-1.png" data-sub-html="Black Panther">
+					<img src="imgs/panther-1.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/avengers-3.png" data-sub-html="Avengers: Infinity War">
+					<img src="imgs/avengers-3.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/antman-2.png" data-sub-html="Ant-Man and the Wasp">
+					<img src="imgs/antman-1.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/cm-1.png" data-sub-html="Captain Marvel">
+					<img src="imgs/cm-1.png" height="150" width="150" />
+				</a>
+
+				<a href="imgs/avengers-4.png" data-sub-html="Avengers: Endgame">
+					<img src="imgs/avengers-4.png" height="150" width="150" />
+				</a>
+			</p>
+
+		</div>
+
+		<!-- Project info -->
+		<div class="section " id="sec-about">
+			<p>
+				Every Frame a Color
+				<br>
+				A look at the use of colors in MCU movies
+				<br><br>
+				Every movie is represented by a color timeline, showing how colors change throughout each movie, and how colors of each movie differ from one another. See if you can identify a movie's key moments from the colors :)
+				<br><br>
+				Images are made by extracting the average colors of each frame in the movie, plotting the frame color as a thin color bar, then arranging them in chronoloigcal order.
+				<br><br>
+				Created this as my way of saying thank you for the 10 years of awesome. Ideas and code base for the images come from various Reddit posts. The name "Every Frame a Color" took inspirations from the YouTube channel and Podcast "Every Frame a Painting".
+				<br><br><br>
+				Made with <i class="fa fa-heart"></i> and <i class="fa fa-bolt"></i>
+				<br><br>
+				<a href="https://github.com/fanghuiz/mcu-frames-color" class="btn transparent" target="_blank">
+					<i class="fa fa-github"></i> Site Repo
+				</a>
+				<br><br>
+				<a href="https://www.github.com/" class="btn transparent">
+					<i class="fa fa-code"></i> Script for Creating Images
+				</a>
+			</p>
+		</div>
+
+	</div>
+
+
+	<!-- JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js" integrity="sha256-e13jRNqOX98m6UAwI/yZTpcDseJtA8s86yfFs4Sqrv8=" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.1.3/dist/js/lightgallery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lg-thumbnail@1.1.0/dist/lg-thumbnail.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lg-fullscreen.js@1.1.0/dist/lg-fullscreen.min.js"></script>
+
+	<script type="text/javascript">
+		var myFullpage = new fullpage('#fullpage', {
+			// fullPage
+			menu: '#menu',
+			anchors: ['home', 'avengers', 'iron-man', 'cap', 'thor', 'gotg', 'ant-man', 'others', 'all', 'about'],
+			verticalCentered: false,
+			controlArrows: true,
+
+			// lightgallery
+			afterRender: function() {
+				lightGallery(document.getElementById('lightgallery'), {
+					enableDrag: false,
+					thumbnail: true
+				});
+			}
+
+		});
+	</script>
+</body>
+
+</html>
