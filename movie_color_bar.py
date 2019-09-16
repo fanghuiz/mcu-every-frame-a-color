@@ -3,6 +3,8 @@ import os
 import subprocess
 import sys
 
+# Requires ffmpeg https://www.ffmpeg.org/ffmpeg.html
+
 # Run script as
 # python movie_color_bar.py input_video output_frame_folder output_image
 
