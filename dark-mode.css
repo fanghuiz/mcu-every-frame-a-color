@@ -1,0 +1,51 @@
+body {
+  background-color: #121212 !important;
+  color: #f8f6f2;
+}
+
+footer p {
+  color: #f8f6f2;
+  opacity: 0.8;
+}
+
+
+.bg-light {
+  background-color: #333 !important;
+}
+
+.navbar-light {
+  color: #f8f6f2;
+}
+
+/* change the brand and text color */
+.navbar-light .navbar-brand,
+.navbar-light .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-light .nav-item.active .nav-link,
+.navbar-light .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #f8f6f2;
+    opacity: 0.6;
+}
+
+#navbar-burger {
+  color: #f8f6f2;
+  opacity: 0.;
+}
+
+.ekko-lightbox .modal-footer {
+  background-color: #222;
+}
+
+.ekko-lightbox .modal-body {
+  background-color: #222;
+}

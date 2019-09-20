@@ -1,420 +1,670 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="en">
 
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134139235-2"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
 
-	  gtag('config', 'UA-134139235-2');
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-134139235-2');
 	</script>
 
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>MCU in Colors - fullPage.js</title>
-	<meta name="author" content="Fanghui Zhao" />
-	<meta name="description" content="Colors of Marvel Cinematic Universe" />
-	<!-- <meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" /> -->
-	<meta name="Resource-type" content="Document" />
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css" integrity="sha256-3IkGqGYOvq1Ype2MXFwVJFeBtBACgiveho3SacOEEP8=" crossorigin="anonymous" />
-	<link rel="stylesheet" type="text/css" href="custom.css" />
-
-	<!-- Light box -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.1.3/dist/css/lightgallery.css">
-
-	<!-- Font -->
-	<link href="https://fonts.googleapis.com/css?family=Rock+Salt|Play&display=swap" rel="stylesheet">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Rock+Salt">
 
 	<!-- Icon library -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" integrity="sha256-zmfNZmXoNWBMemUOo1XUGFfc0ihGGLYdgtJS3KCr/l0=" crossorigin="anonymous" />
+	<script src="https://unpkg.com/feather-icons"></script>
 
-	<style>
+	<!-- Theme -->
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
-		/* Section background and styles
-	* --------------------------------------- */
-	#sec-home{
-		background: -webkit-radial-gradient(circle, rgba(84,0,0,1) 0%, rgba(5,0,1,1) 100%);
-	}
+	<!-- Custom styles for this template -->
+	<link href="custom.css" rel="stylesheet">
 
-	#sec-all p{
-		left: 50%;
-		padding-top: 5%;
-		padding-left: 10%;
-		padding-right: 10%;
-	}
+	<!-- Dark mode -->
+	<link disabled id="dark-reader" rel="stylesheet" href="dark-mode.css">
+	<script src="dark-mode.js" type="text/javascript"></script>
 
-	#sec-about{
-		background: -webkit-radial-gradient(circle, rgba(84,0,0,1) 0%, rgba(5,0,1,1) 100%);
-	}
+	<!-- Light box -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
 
 
-	/*Adding background for the slides
-	* --------------------------------------- */
-
-	/* --- Avengers --- */
-	#avengers1{
-		background-image: url(imgs/avengers-1.png);
-		/* padding: 6% 0 0 0; */
-	}
-	#avengers2{
-		background-image: url(imgs/avengers-2.png);
-	}
-	#avengers3{
-		background-image: url(imgs/avengers-3.png);
-	}
-	#avengers4{
-		background-image: url(imgs/avengers-4.png);
-	}
-
-	/* --- Iron man --- */
-	#im1{
-		background-image: url(imgs/ironman-1.png);
-	}
-	#im2{
-		background-image: url(imgs/ironman-2.png);
-	}
-	#im3{
-		background-image: url(imgs/ironman-3.png);
-	}
-
-	/* --- Captain America --- */
-	#cap1{
-		background-image: url(imgs/cap-1.png);
-	}
-	#cap2{
-		background-image: url(imgs/cap-2.png);
-	}
-	#cap3{
-		background-image: url(imgs/cap-3.png);
-	}
-
-	/* --- Thor --- */
-	#thor1{
-		background-image: url(imgs/thor-1.png);
-	}
-	#thor2{
-		background-image: url(imgs/thor-2.png);
-	}
-	#thor3{
-		background-image: url(imgs/thor-3.png);
-	}
-
-	/* --- Guardians --- */
-	#gotg1{
-		background-image: url(imgs/guardians-1.png);
-	}
-	#gotg2{
-		background-image: url(imgs/guardians-2.png);
-	}
-
-	/* --- Ant man --- */
-	#am1{
-		background-image: url(imgs/antman-1.png);
-	}
-	#am2{
-		background-image: url(imgs/antman-2.png);
-	}
-
-	/* --- Others --- */
-	#hulk1{
-		background-image: url(imgs/hulk-1.png);
-	}
-	#strange1{
-		background-image: url(imgs/dr-strange-1.png);
-	}
-	#spidey1{
-		background-image: url(imgs/spidey-1.png);
-	}
-	#panther1{
-		background-image: url(imgs/panther-1.png);
-	}
-	#cm1{
-		background-image: url(imgs/cm-1.png);
-	}
-
-	</style>
-
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
+	<title>MCU: Every Frame a Color</title>
 </head>
 
 <body>
 
-	<!-- Menu bar -->
-	<ul id="menu">
-		<li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
-		<li data-menuanchor="avengers"><a href="#avengers">Avengers</a></li>
-		<li data-menuanchor="iron-man"><a href="#iron-man">Iron Man</a></li>
-		<li data-menuanchor="cap"><a href="#cap">Captain America</a></li>
-		<li data-menuanchor="thor"><a href="#thor">Thor</a></li>
-		<li data-menuanchor="gotg"><a href="#gotg">Guardians</a></li>
-		<li data-menuanchor="ant-man"><a href="#ant-man">Ant-Man</a></li>
-		<li data-menuanchor="others"><a href="#others">Others</a></li>
-		<li data-menuanchor="all"><a href="#all">Full Gallery</a></li>
-		<li data-menuanchor="about"><a href="#about">About</a></li>
-	</ul>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+			<a class="navbar-brand" href="#">MCU: Every Frame a Color</a>
 
+			<div class="d-flex flex-row order-2 order-lg-3">
+				<ul class="navbar-nav flex-row">
+					<!-- <li class="nav-item"><a class="nav-link px-2" href="#"><span class="fab fa-facebook"></span></a></li> -->
+					<li class="nav-item">
+						<a class="nav-link px-2" href="javascript:void(0)" onclick="dark_toggle();return false;" title="Toggle night mode"><i id="dark-reader-icon" class="fas fa-adjust"></i></a>
+					</li>
+				</ul>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+					<span id="navbar-burger"><i data-feather="menu"></i></span>
+					<!-- <span class="navbar-toggler-icon"></span> -->
+				</button>
+			</div>
+			<div class="collapse navbar-collapse order-3 order-lg-2" id="navbarNavDropdown">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="#"><i class="feather-20" style="vertical-align: top;" data-feather="home"></i></a></li>
+					<li class="nav-item"><a class="nav-link" href="#sec-av">Avengers</a></li>
+					<li class="nav-item"><a class="nav-link" href="#sec-im">Iron Man</a></li>
+					<li class="nav-item"><a class="nav-link" href="#sec-cap">Captain America</a></li>
+					<li class="nav-item"><a class="nav-link" href="#sec-thor">Thor</a></li>
+					<li class="nav-item"><a class="nav-link" href="#sec-gotg">Guardians</a></li>
+					<li class="nav-item"><a class="nav-link" href="#sec-am">Ant-Man</a></li>
+					<li class="nav-item"><a class="nav-link" href="#sec-sp">Spider-Man</a></li>
+					<li class="nav-item"><a class="nav-link" href="#sec-other">Others</a></li>
+					<li class="nav-item"><a class="nav-link" href="#sec-all">Full Gallery</a></li>
+				</ul>
+			</div>
 
-	<div id="fullpage">
+		</nav>
 
-		<div class="section " id="sec-home">
-			<h1>
-				Every frame a color
-			</h1>
-			<p>The Colors of Marvel Cinematic Universe</p>
+		<script>
+			if (localStorage.getItem("darkreader") == "enabled") {
+				document.getElementById("dark-reader").disabled = false;
+				var icon = document.getElementById("dark-reader-icon");
+				// icon.setAttribute("data-feather", "moon");
+			} else {
+				document.getElementById("dark-reader").disabled = true;
+			}
+		</script>
+
+	</header>
+
+	<main role="main">
+
+		<div id="carousel-1" class="carousel slide carousel-fade" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-1" data-slide-to="1"></li>
+				<li data-target="#carousel-1" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="imgs/cap-1.png" alt="First slide">
+					<div class="container">
+						<div class="carousel-caption intro-slide">
+							<h2>Every Frame a Color</h2>
+							<p>A look at the use of colors in Marvel Cinematic Universe
+								<br>
+								Every movie is represented by a color timeline, showing how colors change throughout each movie, and how colors differ from one movie to another.
+								See if you can identify a movie's key moments from the colors!
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="imgs/guardians-1.png" alt="Second slide">
+					<div class="container">
+						<div class="carousel-caption intro-slide">
+							<h2>Every Frame a Color</h2>
+							<p>A look at the use of colors in Marvel Cinematic Universe
+								<br>
+								Every movie is represented by a color timeline, showing how colors change throughout each movie, and how colors differ from one movie to another.
+								See if you can identify a movie's key moments from the colors!
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="imgs/panther-1.png" alt="Third slide">
+					<div class="container">
+						<div class="carousel-caption intro-slide">
+							<h2>Every Frame a Color</h2>
+							<p>A look at the use of colors in Marvel Cinematic Universe
+								<br>
+								Every movie is represented by a color timeline, showing how colors change throughout each movie, and how colors differ from one movie to another.
+								See if you can identify a movie's key moments from the colors!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
 		</div>
 
+
+		<!-- Intro jumbotron -->
+		<!-- <section class="jumbotron text-center">
+			<div class="container">
+				<h1 class="jumbotron-heading">Every Frame a Color<br> in the Marvel Cinematic Universe</h1>
+				<p class="lead text-muted">
+					<br>
+					A look at the use of colors in MCU movies <i class="fa fa-film"></i>
+					<br><br>
+					Every movie is represented by a color timeline, showing how colors change throughout each movie, and how colors differ from one movie to another. Scroll through the gallery and see if you can identify a movie's key moments from the colors!
+				</p>
+			</div>
+		</section> -->
+
+		<!-- Carousel -->
+
 		<!-- Avengers -->
-		<div class="section" id="sec-avengers">
-			<div class="slide" id="avengers1">
-				<h2>The Avengers</h2>
-			</div>
-			<div class="slide" id="avengers2">
-				<h2>Avengers:<br>Age of Ultron</h2>
-			</div>
-			<div class="slide" id="avengers3">
-				<h2>Avengers: Infinity War</h2>
-			</div>
-			<div class="slide" id="avengers4">
-				<h2>Avengers: Endgame</h2>
+		<div id="sec-av">
+			<h1 class="featurette-heading text-center">Avengers</h1>
+			<div id="carouselAV" class="carousel slide" data-ride="carousel" data-interval="false">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselAV" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselAV" data-slide-to="1"></li>
+					<li data-target="#carouselAV" data-slide-to="2"></li>
+					<li data-target="#carouselAV" data-slide-to="3"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="imgs/avengers-1.png" alt="The Avengers">
+						<div class="carousel-caption">
+							<h1>The Avengers</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="imgs/avengers-2.png" alt="Age of Ultron">
+						<div class="carousel-caption d-md-block">
+							<h1>Avengers: Age of Ultron</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="td-block w-100" src="imgs/avengers-3.png" alt="Infinity War">
+						<div class="carousel-caption d-md-block">
+							<h1>Avengers: Infinity War</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="td-block w-100" src="imgs/avengers-4.png" alt="Engdame">
+						<div class="carousel-caption d-md-block">
+							<h1>Avengers: Engdgame</h1>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselAV" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselAV" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
 			</div>
 		</div>
 
 		<!-- Iron man -->
-		<div class="section" id="sec-im">
-			<div class="slide" id="im1">
-				<h2>Iron Man</h2>
-			</div>
-			<div class="slide" id="im2">
-				<h2>Iron Man 2</h2>
-			</div>
-			<div class="slide" id="im3">
-				<h2>Iron Man 3</h2>
+		<div id="sec-im">
+			<h1 class="featurette-heading text-center">Iron Man</h1>
+			<div id="carouselIM" class="carousel slide" data-ride="carousel" data-interval="false">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselIM" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselIM" data-slide-to="1"></li>
+					<li data-target="#carouselIM" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="imgs/ironman-1.png" alt="Iron Man">
+						<div class="carousel-caption d-md-block">
+							<h1>Iron Man</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="imgs/ironman-2.png" alt="Iron Man 2">
+						<div class="carousel-caption d-md-block">
+							<h1>Iron Man 2</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="td-block w-100" src="imgs/ironman-3.png" alt="Iron Man 3">
+						<div class="carousel-caption d-md-block">
+							<h1>Iron Man 3</h1>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselIM" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselIM" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
 			</div>
 		</div>
 
-		<!-- CA -->
-		<div class="section" id="sec-cap">
-			<div class="slide" id="cap1">
-				<h2>Captain America:<br>The First Avenger</h2>
-			</div>
-			<div class="slide" id="cap2">
-				<h2>Captain America:<br>Winter Soldier</h2>
-			</div>
-			<div class="slide" id="cap3">
-				<h2>Captain America:<br>Civil War</h2>
+		<!-- Captain America -->
+		<div id="sec-cap">
+			<h1 class="featurette-heading text-center">Captain America</h1>
+			<div id="carouselCA" class="carousel slide" data-ride="carousel" data-interval="false">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselCA" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselCA" data-slide-to="1"></li>
+					<li data-target="#carouselCA" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="imgs/cap-1.png" alt="The First Avenger">
+						<div class="carousel-caption d-md-block">
+							<h1>Captain America: The First Avenger</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="imgs/cap-2.png" alt="Winter Soldier">
+						<div class="carousel-caption d-md-block">
+							<h1>Captain America: Winter Soldier</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="td-block w-100" src="imgs/cap-3.png" alt="Civil War">
+						<div class="carousel-caption d-md-block">
+							<h1>Captain America: Civil War</h1>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselCA" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselCA" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
 			</div>
 		</div>
 
 		<!-- Thor -->
-		<div class="section" id="sec-thor">
-			<div class="slide" id="thor1">
-				<h2>Thor</h2>
-			</div>
-			<div class="slide" id="thor2">
-				<h2>Thor: The Dark World</h2>
-			</div>
-			<div class="slide" id="thor3">
-				<h2>Thor: Ragnarok</h2>
+		<div id="sec-thor">
+			<h1 class="featurette-heading text-center">Thor</h1>
+			<div id="carouselThor" class="carousel slide" data-ride="carousel" data-interval="false">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselThor" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselThor" data-slide-to="1"></li>
+					<li data-target="#carouselThor" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="imgs/thor-1.png" alt="Thor">
+						<div class="carousel-caption d-md-block">
+							<h1>Thor</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="imgs/thor-2.png" alt="The Dark World">
+						<div class="carousel-caption d-md-block">
+							<h1>Thor: The Dark World</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="td-block w-100" src="imgs/thor-3.png" alt="Ragnarok">
+						<div class="carousel-caption d-md-block">
+							<h1>Thor: Ragnarok</h1>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselThor" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselThor" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
 			</div>
 		</div>
 
-		<!-- GotG -->
-		<div class="section" id="sec-gotg">
-			<div class="slide" id="gotg1">
-				<h2>Guardians of the Galaxy</h2>
-			</div>
-			<div class="slide" id="gotg2">
-				<h2>Guardians of the Galaxy<br>Vol.2</h2>
+		<!-- Guardians -->
+		<div id="sec-gotg">
+			<h1 class="featurette-heading text-center">Guardians of the Galaxy</h1>
+			<div id="carouselGG" class="carousel slide" data-ride="carousel" data-interval="false">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselGG" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselGG" data-slide-to="1"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="imgs/guardians-1.png" alt="Guardians of the Galaxy 1">
+						<div class="carousel-caption d-md-block">
+							<h1>Guardians of the Galaxy</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="imgs/guardians-2.png" alt="Guardians of the Galaxy 2">
+						<div class="carousel-caption d-md-block">
+							<h1>Guardians of the Galaxy<br>Vol.2</h1>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselGG" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselGG" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
 			</div>
 		</div>
 
 		<!-- Ant man -->
-		<div class="section" id="sec-am">
-			<div class="slide" id="am1">
-				<h2>Ant-Man</h2>
-			</div>
-			<div class="slide" id="am2">
-				<h2>Ant-Man and the Wasp</h2>
+		<div id="sec-am">
+			<h1 class="featurette-heading text-center">Ant-Man</h1>
+			<div id="carouselAM" class="carousel slide" data-ride="carousel" data-interval="false">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselAM" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselAM" data-slide-to="1"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="imgs/antman-1.png" alt="Ant-man 1">
+						<div class="carousel-caption d-md-block">
+							<h1>Ant-Man</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="imgs/antman-2.png" alt="Ant-man 2">
+						<div class="carousel-caption d-md-block">
+							<h1>Ant-Man and the Wasp</h1>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselAM" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselAM" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
 			</div>
 		</div>
 
-		<!-- Other solo -->
-		<div class="section" id="sec-other">
-			<div class="slide" id="hulk1">
-				<h2>The Incredible Hulk</h2>
-			</div>
-			<div class="slide" id="strange1">
-				<h2>Doctor Strange</h2>
-			</div>
-			<div class="slide" id="spidey1">
-				<h2>Spider-Man: Homecoming</h2>
-			</div>
-			<div class="slide" id="panther1">
-				<h2>Black Panther</h2>
-			</div>
-			<div class="slide" id="cm1">
-				<h2>Captain Marvel</h2>
+		<!-- Spider man -->
+		<div id="sec-sp">
+			<h1 class="featurette-heading text-center">Spider-Man</h1>
+			<div id="carouselSP" class="carousel slide" data-ride="carousel" data-interval="false">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselSP" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselSP" data-slide-to="1"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="imgs/spidey-1.png" alt="Spider-Man 1">
+						<div class="carousel-caption d-md-block">
+							<h1>Spider-Man: Homecoming</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="imgs/spidey-2.png" alt="Spider-Man 2">
+						<div class="carousel-caption d-md-block">
+							<h1>Spider-Man: Far from Home</h1>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselSP" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselSP" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
 			</div>
 		</div>
 
-		<!-- All in light box gallery -->
-		<div class="section" id="sec-all">
-
-			<p id="lightgallery">
-
-				<a href="imgs/ironman-1.png" data-sub-html="Iron Man">
-					<img src="imgs/ironman-1.png" height="150" width="150" />
+		<!-- Other solos -->
+		<div id="sec-other">
+			<h1 class="featurette-heading text-center">Other Solo Movies</h1>
+			<div id="carouselOther" class="carousel slide" data-ride="carousel" data-interval="false">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselOther" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselOther" data-slide-to="1"></li>
+					<li data-target="#carouselOther" data-slide-to="2"></li>
+					<li data-target="#carouselOther" data-slide-to="3"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="imgs/hulk-1.png" alt="Hulk">
+						<div class="carousel-caption d-md-block">
+							<h1>The Incredible Hulk</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="imgs/strange-1.png" alt="Doctor Strange">
+						<div class="carousel-caption d-md-block">
+							<h1>Doctor Strange</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="imgs/panther-1.png" alt="Black Panther">
+						<div class="carousel-caption d-md-block">
+							<h1>Black Panther</h1>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="imgs/cm-1.png" alt="Captain Marvel">
+						<div class="carousel-caption d-md-block">
+							<h1>Captain Marvel</h1>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselOther" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
 				</a>
-
-				<a href="imgs/hulk-1.png" data-sub-html="The Incredible Hulk">
-					<img src="imgs/hulk-1.png" height="150" width="150" />
+				<a class="carousel-control-next" href="#carouselOther" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
 				</a>
-
-				<a href="imgs/ironman-2.png" data-sub-html="Iron Man 2">
-					<img src="imgs/ironman-2.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/thor-1.png" data-sub-html="Thor">
-					<img src="imgs/thor-1.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/cap-1.png" data-sub-html="Captain America: The First Avenger">
-					<img src="imgs/cap-1.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/avengers-1.png" data-sub-html="The Avengers">
-					<img src="imgs/avengers-1.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/ironman-3.png" data-sub-html="Iron Man 3">
-					<img src="imgs/ironman-3.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/thor-2.png" data-sub-html="Thor: The Dark World">
-					<img src="imgs/thor-2.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/cap-2.png" data-sub-html="Captain America: Winter Soldier">
-					<img src="imgs/cap-2.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/guardians-1.png" data-sub-html="Guardians of the Galaxy">
-					<img src="imgs/guardians-1.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/avengers-2.png" data-sub-html="Avengers: Age of Ultron">
-					<img src="imgs/avengers-2.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/antman-1.png" data-sub-html="Ant-Man">
-					<img src="imgs/antman-1.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/cap-3.png" data-sub-html="Captain America: Civil War">
-					<img src="imgs/cap-3.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/dr-strange-1.png" data-sub-html="Doctor Strange">
-					<img src="imgs/dr-strange-1.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/guardians-2.png" data-sub-html="Guardians of the Galaxy Vol.2">
-					<img src="imgs/guardians-2.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/spidey-1.png" data-sub-html="Spider-Man: Homecoming">
-					<img src="imgs/spidey-1.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/thor-3.png" data-sub-html="Thor: Ragnarok">
-					<img src="imgs/thor-3.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/panther-1.png" data-sub-html="Black Panther">
-					<img src="imgs/panther-1.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/avengers-3.png" data-sub-html="Avengers: Infinity War">
-					<img src="imgs/avengers-3.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/antman-2.png" data-sub-html="Ant-Man and the Wasp">
-					<img src="imgs/antman-1.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/cm-1.png" data-sub-html="Captain Marvel">
-					<img src="imgs/cm-1.png" height="150" width="150" />
-				</a>
-
-				<a href="imgs/avengers-4.png" data-sub-html="Avengers: Endgame">
-					<img src="imgs/avengers-4.png" height="150" width="150" />
-				</a>
-			</p>
-
+			</div>
 		</div>
+		<!-- /.Carousel -->
 
-		<!-- Project info -->
-		<div class="section " id="sec-about">
-			<p>
-				<i class="fa fa-film"></i> Every Frame a Color <i class="fa fa-film"></i>
+		<!-- Light box gallery -->
+		<section class="container" id="sec-all">
+			<h1 class="featurette-heading text-center">Full Gallery</h1>
+			<p class="lead text-muted text-center">Click to zoom in</p>
+
+			<!-- phase 1 -->
+			<div class="row justify-content-center no-gutters">
+				<div class="col">
+					<a href="imgs/ironman-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Iron Man">
+						<img src="imgs/ironman-1.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/hulk-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="The Incredible Hulk">
+						<img src="imgs/hulk-1.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/ironman-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Iron Man 2">
+						<img src="imgs/ironman-2.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/thor-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Thor">
+						<img src="imgs/thor-1.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/cap-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Captain America: The First Avenger">
+						<img src="imgs/cap-1.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/avengers-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="The Avengers">
+						<img src="imgs/avengers-1.png" class="img-fluid">
+					</a>
+				</div>
+			</div>
+
+			<!-- phase 2 -->
+			<div class="row justify-content-center no-gutters">
+				<div class="col">
+					<a href="imgs/ironman-3.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Iron Man 3">
+						<img src="imgs/ironman-3.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/thor-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Thor: The Dark World">
+						<img src="imgs/thor-2.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/cap-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Captain America: Winter Soldier">
+						<img src="imgs/cap-2.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/guardians-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Guardians of the Galaxy">
+						<img src="imgs/guardians-1.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/avengers-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Avengers: Age of Ultron">
+						<img src="imgs/avengers-2.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/antman-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Ant-Man">
+						<img src="imgs/antman-1.png" class="img-fluid">
+					</a>
+				</div>
+			</div>
+
+			<!-- phase 3 -->
+			<div class="row justify-content-center no-gutters">
+				<div class="col">
+					<a href="imgs/cap-3.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Captain America: Civil War">
+						<img src="imgs/cap-3.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/strange-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Doctor Strange">
+						<img src="imgs/strange-1.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/guardians-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Guardians of the Galaxy Vol.2">
+						<img src="imgs/guardians-2.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/spidey-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Spider-Man: Homecoming">
+						<img src="imgs/spidey-1.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/thor-3.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Thor: Ragnarok">
+						<img src="imgs/thor-3.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/panther-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Black Panther">
+						<img src="imgs/panther-1.png" class="img-fluid">
+					</a>
+				</div>
+			</div>
+
+			<div class="row justify-content-center no-gutters">
+				<div class="col">
+					<a href="imgs/avengers-3.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Avengers: Infinity War">
+						<img src="imgs/avengers-3.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/antman-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Ant-Man and the Wasp">
+						<img src="imgs/antman-2.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/cm-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Captain Marvel">
+						<img src="imgs/cm-1.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/avengers-4.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Avengers: Endgame">
+						<img src="imgs/avengers-4.png" class="img-fluid">
+					</a>
+				</div>
+				<div class="col">
+					<a href="imgs/spidey-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Spider-Man: Far From Home">
+						<img src="imgs/spidey-2.png" class="img-fluid">
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="jumbotron text-center">
+			<div class="container">
+				<a href="https://github.com/fanghuiz/mcu-frames-color" target="_blank" class="btn btn-secondary"><i class="feather-24" data-feather="github"></i> Site Repo</a>
 				<br>
-				A look at the use of colors in MCU movies
-				<br><br>
-				Every movie is represented by a color timeline, showing how colors change throughout each movie, and how colors of each movie differ from one another. See if you can identify a movie's key moments from the colors!
-				<br><br>
-				Images are made by extracting the average colors of each frame in the movie, plotting the frame color as a thin color bar, then arranging them in chronoloigcal order.
-				<br><br>
-				Created this as my way of saying thank you for the 10 years of awesome. Ideas and code base for the images come from various Reddit posts. The name "Every Frame a Color" took inspirations from the YouTube channel and Podcast "Every Frame a
-				Painting".
-				<br><br><br>
-				Made with <i class="fa fa-heart"></i> and <i class="fa fa-bolt"></i>
-				<br><br>
-				<a href="https://github.com/fanghuiz/mcu-frames-color" class="btn transparent" target="_blank">
-					<i class="fa fa-github"></i> Site Repo
-				</a>
-				<br><br>
-				<a href="https://gist.github.com/fanghuiz/cfe8eed33ebbdeaa47aba5f4f1e93c30" class="btn transparent" target="_blank">
-					<i class="fa fa-code"></i> Script for Creating Images
-				</a>
-			</p>
-		</div>
+				<a href="https://gist.github.com/fanghuiz/cfe8eed33ebbdeaa47aba5f4f1e93c30" target="_blank" class="btn btn-secondary"><i class="feather-24" data-feather="code"></i> Script for Creating Images</a>
 
-	</div>
+				<p class="lead text-muted">
+					Images are made by extracting the average colors of each frame in the movie, plotting the frame color as a thin color bar, then arranging them in chronological order.
+					<br><br>
+					Created this as my way of celebrating all the awesomeness in the MCU. Ideas and code base for the images come from various Reddit posts. The name "Every Frame a Color" took inspirations from the YouTube channel "Every Frame a Painting".</p>
+			</div>
+		</section>
 
 
-	<!-- JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js" integrity="sha256-e13jRNqOX98m6UAwI/yZTpcDseJtA8s86yfFs4Sqrv8=" crossorigin="anonymous"></script>
+		<!-- FOOTER -->
+		<footer class="container">
+			<p class="float-right"><a href="#">Back to top</a></p>
+			<p class="float-left">2019 &middot; Made with <i class="feather-16" data-feather="heart"></i> and <i class="feather-16" data-feather="zap"></i> &middot; Images on the site are licensed under <a class="footer-link" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><i
+					  class="fab fa-creative-commons"></i> <i class="fab fa-creative-commons-by"></i> <i class="fab fa-creative-commons-nc"></i></a>
+				<br>Build using <a class="footer-link" href="https://fezvrasta.github.io/bootstrap-material-design/">Material Design for Bootstrap</a> &middot; Icons by <a class="footer-link" href="https://feathericons.com/">Feather</a> and <a class="footer-link"
+				  href="https://fontawesome.com/">Font Awesome</a></p>
+		</footer>
+	</main>
 
-	<script src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.1.3/dist/js/lightgallery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/lg-thumbnail@1.1.0/dist/lg-thumbnail.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/lg-fullscreen.js@1.1.0/dist/lg-fullscreen.min.js"></script>
 
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
 
-	<script type="text/javascript">
-		var myFullpage = new fullpage('#fullpage', {
-			// fullPage
-			menu: '#menu',
-			anchors: ['home', 'avengers', 'iron-man', 'cap', 'thor', 'gotg', 'ant-man', 'others', 'all', 'about'],
-			verticalCentered: false,
-			controlArrows: true,
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
 
-			// lightgallery
-			afterRender: function() {
-				lightGallery(document.getElementById('lightgallery'), {
-					enableDrag: false,
-					thumbnail: true
-				});
-			}
+	<script language="JavaScript" type="text/javascript">
+		$('.carousel').carousel()
+
+		$(document).ready(function() {
+			$('body').bootstrapMaterialDesign();
 		});
+
+		$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+			event.preventDefault();
+			$(this).ekkoLightbox({
+				wrapping: false
+			});
+		});
+
+		feather.replace()
 	</script>
+
 </body>
 
 </html>
