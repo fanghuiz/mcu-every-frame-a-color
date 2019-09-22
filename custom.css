@@ -181,17 +181,23 @@ footer p {
 }
 
 
-/* Light box
+/* Gallery
 -------------------------------------------------- */
+#spotlight {
+    /* font styles, background */
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+}
 
-.ekko-lightbox .modal-footer {
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-right: 0 !important;
+#spotlight .scene img{
+    filter: grayscale(0);
+    transition: filter 1s ease-out,
+                opacity 1s ease-out;
+}
+
+#spotlight .scene img.my-animation{
+    opacity: 0 !important;
+    filter: grayscale(1);
 }
 
 /* Feather icon size */

@@ -43,7 +43,11 @@
 	<script src="dark-mode.js" type="text/javascript"></script>
 
 	<!-- Light box -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" /> -->
+
+	<script src="https://rawcdn.githack.com/nextapps-de/spotlight/0.6.3/dist/spotlight.bundle.js">
+	</script>
+
 
 
 	<title>MCU: Every Frame a Color</title>
@@ -494,39 +498,39 @@
 		<!-- /.Carousel -->
 
 		<!-- Light box gallery -->
-		<section class="container" id="all">
+		<section class="container spotlight-group" data-zoom="false" data-player="false" data-animation="my-animation" id="all">
 			<h1 class="featurette-heading text-center">Full Gallery</h1>
 			<p class="lead text-muted text-center">Click to zoom in</p>
 
-			<!-- phase 1 -->
+			<!-- Phase 1 -->
 			<div class="row justify-content-center no-gutters">
 				<div class="col">
-					<a href="imgs/ironman-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Iron Man">
+					<a href="imgs/ironman-1.png" class="spotlight" data-title="Iron Man">
 						<img src="imgs/ironman-1.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/hulk-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="The Incredible Hulk">
+					<a href="imgs/hulk-1.png" class="spotlight" data-title="The Incredible Hulk">
 						<img src="imgs/hulk-1.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/ironman-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Iron Man 2">
+					<a href="imgs/ironman-2.png" class="spotlight" data-title="Iron Man 2">
 						<img src="imgs/ironman-2.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/thor-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Thor">
+					<a href="imgs/thor-1.png" class="spotlight" data-title="Thor">
 						<img src="imgs/thor-1.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/cap-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Captain America: The First Avenger">
+					<a href="imgs/cap-1.png" class="spotlight" data-title="Captain America: The First Avenger">
 						<img src="imgs/cap-1.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/avengers-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="The Avengers">
+					<a href="imgs/avengers-1.png" class="spotlight" data-title="The Avengers">
 						<img src="imgs/avengers-1.png" class="img-fluid">
 					</a>
 				</div>
@@ -535,66 +539,67 @@
 			<!-- phase 2 -->
 			<div class="row justify-content-center no-gutters">
 				<div class="col">
-					<a href="imgs/ironman-3.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Iron Man 3">
+					<a href="imgs/ironman-3.png" class="spotlight" data-title="Iron Man 3">
 						<img src="imgs/ironman-3.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/thor-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Thor: The Dark World">
+					<a href="imgs/thor-2.png" class="spotlight" data-title="Thor: The Dark World">
 						<img src="imgs/thor-2.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/cap-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Captain America: Winter Soldier">
+					<a href="imgs/cap-2.png" class="spotlight" data-title="Captain America: Winter Soldier">
 						<img src="imgs/cap-2.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/guardians-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Guardians of the Galaxy">
+					<a href="imgs/guardians-1.png" class="spotlight" data-title="Guardians of the Galaxy">
 						<img src="imgs/guardians-1.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/avengers-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Avengers: Age of Ultron">
+					<a href="imgs/avengers-2.png" class="spotlight" data-title="Avengers: Age of Ultron">
 						<img src="imgs/avengers-2.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/antman-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Ant-Man">
+					<a href="imgs/antman-1.png" class="spotlight" data-title="Ant-Man">
 						<img src="imgs/antman-1.png" class="img-fluid">
 					</a>
 				</div>
 			</div>
 
+
 			<!-- phase 3 -->
 			<div class="row justify-content-center no-gutters">
 				<div class="col">
-					<a href="imgs/cap-3.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Captain America: Civil War">
+					<a href="imgs/cap-3.png" class="spotlight" data-title="Captain America: Civil War">
 						<img src="imgs/cap-3.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/strange-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Doctor Strange">
+					<a href="imgs/strange-1.png" class="spotlight" data-title="Doctor Strange">
 						<img src="imgs/strange-1.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/guardians-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Guardians of the Galaxy Vol.2">
+					<a href="imgs/guardians-2.png" class="spotlight" data-title="Guardians of the Galaxy Vol.2">
 						<img src="imgs/guardians-2.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/spidey-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Spider-Man: Homecoming">
+					<a href="imgs/spidey-1.png" class="spotlight" data-title="Spider-Man: Homecoming">
 						<img src="imgs/spidey-1.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/thor-3.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Thor: Ragnarok">
+					<a href="imgs/thor-3.png" class="spotlight" data-title="Thor: Ragnarok">
 						<img src="imgs/thor-3.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/panther-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Black Panther">
+					<a href="imgs/panther-1.png" class="spotlight" data-title="Black Panther">
 						<img src="imgs/panther-1.png" class="img-fluid">
 					</a>
 				</div>
@@ -602,32 +607,33 @@
 
 			<div class="row justify-content-center no-gutters">
 				<div class="col">
-					<a href="imgs/avengers-3.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Avengers: Infinity War">
+					<a href="imgs/avengers-3.png" class="spotlight" data-title="Avengers: Infinity War">
 						<img src="imgs/avengers-3.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/antman-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Ant-Man and the Wasp">
+					<a href="imgs/antman-2.png" class="spotlight" data-title="Ant-Man and the Wasp">
 						<img src="imgs/antman-2.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/cm-1.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Captain Marvel">
+					<a href="imgs/cm-1.png" class="spotlight" data-title="Captain Marvel">
 						<img src="imgs/cm-1.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/avengers-4.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Avengers: Endgame">
+					<a href="imgs/avengers-4.png" class="spotlight" data-title="Avengers: Endgame">
 						<img src="imgs/avengers-4.png" class="img-fluid">
 					</a>
 				</div>
 				<div class="col">
-					<a href="imgs/spidey-2.png" data-toggle="lightbox" data-gallery=" full-gallery" data-footer="Spider-Man: Far From Home">
+					<a href="imgs/spidey-2.png" class="spotlight" data-title="Spider-Man: Far From Home">
 						<img src="imgs/spidey-2.png" class="img-fluid">
 					</a>
 				</div>
 			</div>
 		</section>
+
 
 		<section class="jumbotron text-center">
 			<div class="container">
@@ -660,7 +666,6 @@
 	<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
 
 	<script language="JavaScript" type="text/javascript">
 		$('.carousel').carousel()
@@ -673,14 +678,9 @@
 			$('.navbar-collapse').collapse('hide');
 		});
 
-		$(document).on('click', '[data-toggle="lightbox"]', function(event) {
-			event.preventDefault();
-			$(this).ekkoLightbox({
-				wrapping: false
-			});
-		});
-
 		feather.replace()
+
+		// Spotlight.show(gallery);
 	</script>
 
 </body>
