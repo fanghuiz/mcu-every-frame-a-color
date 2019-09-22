@@ -56,7 +56,13 @@
 
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
-			<a class="navbar-brand" href="#">MCU: Every Frame a Color</a>
+
+			<a class="navbar-brand" href="#">
+				<!-- Hide on small screen -->
+				<span class="d-none d-sm-block">MCU: Every Frame a Color</span>
+				<!-- Hide on large screen -->
+				<span class="d-sm-none">Every Frame a Color</span>
+			</a>
 
 			<div class="d-flex flex-row order-2 order-lg-3">
 				<ul class="navbar-nav flex-row">
@@ -73,18 +79,17 @@
 			<div class="collapse navbar-collapse order-3 order-lg-2" id="navbarNavDropdown">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item"><a class="nav-link" href="#"><i class="feather-20" style="vertical-align: top;" data-feather="home"></i></a></li>
-					<li class="nav-item"><a class="nav-link" href="#sec-av">Avengers</a></li>
-					<li class="nav-item"><a class="nav-link" href="#sec-im">Iron Man</a></li>
-					<li class="nav-item"><a class="nav-link" href="#sec-cap">Captain America</a></li>
-					<li class="nav-item"><a class="nav-link" href="#sec-thor">Thor</a></li>
-					<li class="nav-item"><a class="nav-link" href="#sec-gotg">Guardians</a></li>
-					<li class="nav-item"><a class="nav-link" href="#sec-am">Ant-Man</a></li>
-					<li class="nav-item"><a class="nav-link" href="#sec-sp">Spider-Man</a></li>
-					<li class="nav-item"><a class="nav-link" href="#sec-other">Others</a></li>
-					<li class="nav-item"><a class="nav-link" href="#sec-all">Full Gallery</a></li>
+					<li class="nav-item"><a class="nav-link" href="#avengers">Avengers</a></li>
+					<li class="nav-item"><a class="nav-link" href="#iron-man">Iron Man</a></li>
+					<li class="nav-item"><a class="nav-link" href="#cap">Captain America</a></li>
+					<li class="nav-item"><a class="nav-link" href="#thor">Thor</a></li>
+					<li class="nav-item"><a class="nav-link" href="#gotg">Guardians</a></li>
+					<li class="nav-item"><a class="nav-link" href="#ant-man">Ant-Man</a></li>
+					<li class="nav-item"><a class="nav-link" href="#spidey">Spider-Man</a></li>
+					<li class="nav-item"><a class="nav-link" href="#others">Others</a></li>
+					<li class="nav-item"><a class="nav-link" href="#all">Full Gallery</a></li>
 				</ul>
 			</div>
-
 		</nav>
 
 		<script>
@@ -175,7 +180,7 @@
 		<!-- Carousel -->
 
 		<!-- Avengers -->
-		<div id="sec-av">
+		<div id="avengers">
 			<h1 class="featurette-heading text-center">Avengers</h1>
 			<div id="carouselAV" class="carousel slide" data-ride="carousel" data-interval="false">
 				<ol class="carousel-indicators">
@@ -222,7 +227,7 @@
 		</div>
 
 		<!-- Iron man -->
-		<div id="sec-im">
+		<div id="iron-man">
 			<h1 class="featurette-heading text-center">Iron Man</h1>
 			<div id="carouselIM" class="carousel slide" data-ride="carousel" data-interval="false">
 				<ol class="carousel-indicators">
@@ -262,7 +267,7 @@
 		</div>
 
 		<!-- Captain America -->
-		<div id="sec-cap">
+		<div id="cap">
 			<h1 class="featurette-heading text-center">Captain America</h1>
 			<div id="carouselCA" class="carousel slide" data-ride="carousel" data-interval="false">
 				<ol class="carousel-indicators">
@@ -302,7 +307,7 @@
 		</div>
 
 		<!-- Thor -->
-		<div id="sec-thor">
+		<div id="thor">
 			<h1 class="featurette-heading text-center">Thor</h1>
 			<div id="carouselThor" class="carousel slide" data-ride="carousel" data-interval="false">
 				<ol class="carousel-indicators">
@@ -342,7 +347,7 @@
 		</div>
 
 		<!-- Guardians -->
-		<div id="sec-gotg">
+		<div id="gotg">
 			<h1 class="featurette-heading text-center">Guardians of the Galaxy</h1>
 			<div id="carouselGG" class="carousel slide" data-ride="carousel" data-interval="false">
 				<ol class="carousel-indicators">
@@ -375,7 +380,7 @@
 		</div>
 
 		<!-- Ant man -->
-		<div id="sec-am">
+		<div id="ant-man">
 			<h1 class="featurette-heading text-center">Ant-Man</h1>
 			<div id="carouselAM" class="carousel slide" data-ride="carousel" data-interval="false">
 				<ol class="carousel-indicators">
@@ -408,7 +413,7 @@
 		</div>
 
 		<!-- Spider man -->
-		<div id="sec-sp">
+		<div id="spidey">
 			<h1 class="featurette-heading text-center">Spider-Man</h1>
 			<div id="carouselSP" class="carousel slide" data-ride="carousel" data-interval="false">
 				<ol class="carousel-indicators">
@@ -441,7 +446,7 @@
 		</div>
 
 		<!-- Other solos -->
-		<div id="sec-other">
+		<div id="others">
 			<h1 class="featurette-heading text-center">Other Solo Movies</h1>
 			<div id="carouselOther" class="carousel slide" data-ride="carousel" data-interval="false">
 				<ol class="carousel-indicators">
@@ -489,7 +494,7 @@
 		<!-- /.Carousel -->
 
 		<!-- Light box gallery -->
-		<section class="container" id="sec-all">
+		<section class="container" id="all">
 			<h1 class="featurette-heading text-center">Full Gallery</h1>
 			<p class="lead text-muted text-center">Click to zoom in</p>
 
@@ -662,6 +667,10 @@
 
 		$(document).ready(function() {
 			$('body').bootstrapMaterialDesign();
+		});
+
+		$('.navbar-nav>li>a').on('click', function() {
+			$('.navbar-collapse').collapse('hide');
 		});
 
 		$(document).on('click', '[data-toggle="lightbox"]', function(event) {
